@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+        }
+        .highlight {
+            background-color: #ffcc00;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        main {
+            background-image: url('{{ url_for('static', filename='image.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px; /* Add padding for content */
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('attendance') }}">Attendance</a></li>
+            <li><a href="{{ url_for('enrolled_courses') }}">Enrolled Courses</a></li>
+            <li><a href="{{ url_for('exam_results') }}">Exam Results</a></li>
+            <li><a href="{{ url_for('student_details') }}">Student Details</a></li>
+            <li><a href="{{ url_for('timetable') }}">Timetable</a></li>
+            <li><a href="{{ url_for('triggers') }}">Triggers</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+           
+
+        </ul>
+    </nav>
+    <main>
+        <h1><span class="highlight">Welcome Back!!</span></h1>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>
